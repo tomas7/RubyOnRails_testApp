@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application'%>
+    <%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css'%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+    <ul class="custom_ul">
+      <div class= wrapper_navbar>
+        <li class="custom_li"><%= link_to "HOME", home_path %></li>
+        <li class="custom_li"><%= link_to "ABOUT", about_path %></li>
+        <li class= "add_article"><%= link_to "CREATE ARTICLE", new_post_path%> </li>
+      </div>
+    </ul>
+  </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<h1><%= @welcome %></h1>
+<p>This is Ruby on rails testing project</p>
+
+<% @post.each do |x|%>
+    <div class="article_wrapper">
+        <h3><%= x.title %></h3>
+        <p><%= x.body %></p>
+        <%= link_to "more", post_path(x)%>
+    </div>
+<% end %>
+
+
+
+
